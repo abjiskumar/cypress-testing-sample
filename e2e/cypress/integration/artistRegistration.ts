@@ -6,6 +6,7 @@ import input from '../fixtures/input_options.json'
 describe('Creating a new artist user', () => {
 
     var randomEmailType = require('random-email')({ domain: 'gmail.com' });
+    const fixtureFile = 'testArtistImage.jpg'
     Cypress.on('uncaught:exception', (err, runnable) => {
         return false
     })
@@ -46,9 +47,8 @@ describe('Creating a new artist user', () => {
         cy.contains(input.performanceType).should('be.visible').click()
         cy.get('#compiledAddress').type(input.artistLocation)
         cy.get('#compiledAddress-option-0').should('be.visible').click()
-        const fixtureFile = 'testArtistImage.jpg';
-        cy.get('input[type="file"]').attachFile(fixtureFile);
-        cy.contains('jss574 jss575 jss508').should('be.visible')
+        cy.get('input[type="file"]').attachFile(fixtureFile)
+        cy.get('#sda-signup-artist-create-form').find('img')
         cy.get(btnText.artist_save_profile).click()
         cy.url().should('include', url.artist_profile_creation)
     });
