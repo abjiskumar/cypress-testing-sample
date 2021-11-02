@@ -1,10 +1,18 @@
 {
     "home_join_btn":"Join",
-    "home_join_watch_btn":"Watch",
-    "watch_signup_facebook":"Continue with Facebook",
-    "watch_signup_google":"Continue with Google",
-    "watch_signup_twitter":"Continue with Twitter",
-    "watch_signup_email":"Create Account with Email",
-    "save_and_continue":"Save & Continue",
-    "log_out":"Log Out"
+    "home_join_watch_btn":"#sda-nav-menu-desktop-watch-item",
+    "home_join_perform_btn":"#sda-nav-menu-desktop-perform-item",
+
+    "watch_signup_facebook":"#sda-audience-login-facebook-button",
+    "watch_signup_google":"#sda-audience-login-google-button",
+    "watch_signup_twitter":"#sda-audience-login-twitter-button",
+    "watch_signup_email":"#sda-audience-register-email-button",
+
+    "artist_signup_facebook":"#sda-artist-login-facebook-button",
+    "artist_signup_google":"#sda-artist-login-google-button",
+    "artist_signup_twitter":"#sda-artist-login-twitter-button",
+    "artist_signup_email":"#sda-artist-register-email-button",
+    "save_and_continue":"#sda-login-submit-button",
+    "log_out":"#sda-nav-menu-signout-item",
+    "log_in":"#sda-login-submit-button"
 }

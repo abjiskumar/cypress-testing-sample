@@ -2,5 +2,7 @@
   "base_url": "https://staging.sidedooraccess.com",
   "home_url": "https://staging.sidedooraccess.com/home",
   "watch_signup_url": "https://staging.sidedooraccess.com/signup/audience",
+  "artist_signup_url":"https://staging.sidedooraccess.com/signup/artist",
+  "artist_signup_profile":"https://staging.sidedooraccess.com/signup/artist/profile",
   "watch_profile_home": "https://staging.sidedooraccess.com/profile/home"
 }

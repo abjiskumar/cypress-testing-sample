@@ -1,4 +1,8 @@
 {
   "viewportWidth": 1240,
-  "viewportHeight": 800
+  "viewportHeight": 800,
+  "testFiles": [
+    "audienceRegistration.ts",
+    "artistRegistration.ts"
+]
 }
