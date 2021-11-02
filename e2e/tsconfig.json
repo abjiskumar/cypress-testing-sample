@@ -10,5 +10,6 @@
       "allowJs": true,
       "types": ["cypress","node","cypress-file-upload"],
       "allowSyntheticDefaultImports":true
-    }
+    },
+    "include": ["**/*.ts"]
   }

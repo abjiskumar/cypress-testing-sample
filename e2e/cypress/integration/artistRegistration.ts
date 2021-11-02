@@ -4,7 +4,7 @@ import loginCreds from '../fixtures/login_credentials.json'
 import input from '../fixtures/input_options.json'
 
 describe('Creating a new artist user', () => {
-    
+
     var randomEmailType = require('random-email')({ domain: 'gmail.com' });
     Cypress.on('uncaught:exception', (err, runnable) => {
         return false
@@ -36,7 +36,7 @@ describe('Creating a new artist user', () => {
         cy.get('#password').type(loginCreds.password)
         cy.get('#confirmPassword').type(loginCreds.password)
         cy.get('input[name="acceptsTos"]').check()
-        cy.get(btnText.save_and_continue).click()     
+        cy.get(btnText.save_and_continue).click()
     })
 
     it('Input artist specific details and save the profile', () => {
@@ -46,12 +46,13 @@ describe('Creating a new artist user', () => {
         cy.contains(input.performanceType).should('be.visible').click()
         cy.get('#compiledAddress').type(input.artistLocation)
         cy.get('#compiledAddress-option-0').should('be.visible').click()
-        cy.fixture('testArtistImage.jpg').then(fileContent => {
-            cy.get('input[type="file"]').attachFile({
-                fileContent: fileContent.toString(),
-                fileName: 'testArtistImage.jpg'
-            });
-        });
+        const fixtureFile = 'testArtistImage.jpg';
+        cy.get('input[type="file"]').attachFile(fixtureFile);
+        cy.contains('jss574 jss575 jss508').should('be.visible')
+        cy.get(btnText.artist_save_profile).click()
+        cy.url().should('include', url.artist_profile_creation)
     });
+
+
 
 })

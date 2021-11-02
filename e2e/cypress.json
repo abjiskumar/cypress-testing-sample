@@ -4,5 +4,6 @@
   "testFiles": [
     "audienceRegistration.ts",
     "artistRegistration.ts"
-]
+  ],
+  "supportFile": "cypress/support/index.ts"
 }

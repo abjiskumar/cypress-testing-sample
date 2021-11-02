@@ -12,6 +12,7 @@
     "artist_signup_google":"#sda-artist-login-google-button",
     "artist_signup_twitter":"#sda-artist-login-twitter-button",
     "artist_signup_email":"#sda-artist-register-email-button",
+    "artist_save_profile":"#sda-create-artist-profile-button",
     "save_and_continue":"#sda-login-submit-button",
     "log_out":"#sda-nav-menu-signout-item",
     "log_in":"#sda-login-submit-button"
