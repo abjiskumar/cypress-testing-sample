@@ -1,11 +1,13 @@
 {
   "devDependencies": {
     "@types/node": "^16.11.6",
+    "cypress": "^8.7.0",
     "cypress-file-upload": "^5.0.8",
     "ts-loader": "^9.2.6"
   },
   "dependencies": {
     "@cypress/webpack-preprocessor": "^5.9.1",
-    "random-email": "^1.0.3"
+    "random-email": "^1.0.3",
+    "unique-names-generator": "^4.6.0"
   }
 }

@@ -1,6 +1,8 @@
 {
     "artistName":"Test Artist",
     "performanceType":"Music",
-    "artistLocation":"Halifax"
+    "artistLocation":"Halifax",
+    "spaceLocation":"Kingsway",
+    "presenterLocation":"Vancouver"
   }
   

@@ -1,10 +1,14 @@
 import url from '../fixtures/urls.json'
 import btnText from '../fixtures/btn_text.json'
 import loginCreds from '../fixtures/login_credentials.json'
+import { uniqueNamesGenerator, Config, names } from 'unique-names-generator';
 
 describe('Creating a new audience user ', () => {
     
     var randomEmailType = require('random-email')({ domain: 'gmail.com' });
+    const config: Config = {
+        dictionaries: [names]
+      }
     Cypress.on('uncaught:exception', (err, runnable) => {
         return false
     })
@@ -30,8 +34,8 @@ describe('Creating a new audience user ', () => {
         cy.get(btnText.watch_signup_email).click()
         cy.get('#email').type(randomEmailType)
         cy.get('#confirmEmail').type(randomEmailType)
-        cy.get('#firstName').type(loginCreds.audienceFirstName)
-        cy.get('#lastName').type(loginCreds.audienceLastName)
+        cy.get('#firstName').type(uniqueNamesGenerator(config))
+        cy.get('#lastName').type(uniqueNamesGenerator(config))
         cy.get('#password').type(loginCreds.password)
         cy.get('#confirmPassword').type(loginCreds.password)
         cy.get('input[name="acceptsTos"]').check()

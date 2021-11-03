@@ -2,18 +2,37 @@
     "home_join_btn":"Join",
     "home_join_watch_btn":"#sda-nav-menu-desktop-watch-item",
     "home_join_perform_btn":"#sda-nav-menu-desktop-perform-item",
+    "home_join_host_btn":"#sda-nav-menu-desktop-host-item",
 
     "watch_signup_facebook":"#sda-audience-login-facebook-button",
     "watch_signup_google":"#sda-audience-login-google-button",
     "watch_signup_twitter":"#sda-audience-login-twitter-button",
     "watch_signup_email":"#sda-audience-register-email-button",
 
+    "space_signup_facebook":"#sda-space-login-facebook-button",
+    "space_signup_google":"#sda-space-login-google-button",
+    "space_signup_twitter":"#sda-space-login-twitter-button",
+    "space_signup_email":"#sda-space-register-email-button",
+
+    "presenter_signup_facebook":"#sda-presenter-login-facebook-button",
+    "presenter_signup_google":"#sda-presenter-login-google-button",
+    "presenter_signup_twitter":"#sda-presenter-login-twitter-button",
+    "presenter_signup_email":"#sda-presenter-register-email-button",
+
+    "space_intent":"#signup-have-a-venue-button",
+    "space_present_signup":"#signup-venue-create-form",
+    "present_intent":"#signup-want-to-present-button",
+
+
     "artist_signup_facebook":"#sda-artist-login-facebook-button",
     "artist_signup_google":"#sda-artist-login-google-button",
     "artist_signup_twitter":"#sda-artist-login-twitter-button",
     "artist_signup_email":"#sda-artist-register-email-button",
+
     "artist_save_profile":"#sda-create-artist-profile-button",
+    "space_create":"#sda-signup-venue-create-button",
     "save_and_continue":"#sda-login-submit-button",
+    "space_save_continue":"#patch-form-submit",
     "log_out":"#sda-nav-menu-signout-item",
     "log_in":"#sda-login-submit-button"
 }

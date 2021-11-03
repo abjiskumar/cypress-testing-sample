@@ -3,7 +3,9 @@
   "viewportHeight": 800,
   "testFiles": [
     "audienceRegistration.ts",
-    "artistRegistration.ts"
+    "artistRegistration.ts",
+    "hostSpaceRegistration.ts",
+    "hostPresentRegistration.ts"
   ],
   "supportFile": "cypress/support/index.ts"
 }
