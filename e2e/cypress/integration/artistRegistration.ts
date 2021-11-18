@@ -5,7 +5,7 @@ import input from '../fixtures/input_options.json'
 import { uniqueNamesGenerator, Config, names } from 'unique-names-generator';
 
 describe('Creating a new artist user', () => {
-
+    indexedDB.deleteDatabase('firebaseLocalStorageDb')
     var randomEmailType = require('random-email')({ domain: 'gmail.com' });
     const fixtureFile = 'testArtistImage.jpg'
     const config: Config = {

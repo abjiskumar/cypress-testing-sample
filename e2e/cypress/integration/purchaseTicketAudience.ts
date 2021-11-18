@@ -5,7 +5,6 @@ import { uniqueNamesGenerator, Config, names } from 'unique-names-generator';
 
 describe('Creating a new audience user ', () => {
     indexedDB.deleteDatabase('firebaseLocalStorageDb')
-
     var randomEmailType = require('random-email')({ domain: 'gmail.com' });
     const config: Config = {
         dictionaries: [names]
@@ -43,12 +42,24 @@ describe('Creating a new audience user ', () => {
         cy.get(btnText.save_and_continue).click()     
     })
 
-    it('Verify successful account creation and log out', () => {
+    it('Verify successful account creation and click on a show', () => {
         cy.url().should('include', url.watch_profile_home)
-        cy.get('#sda-nav-menu-open-button').click()
-        cy.get(btnText.log_out).click()
-        cy.wait(4000)
-        cy.get(btnText.log_in).should('be.visible')
+        cy.contains(btnText.home_browse).trigger('mouseover')
+        cy.get(btnText.home_browse_shows).should('be.visible').click()
+        cy.url().should('include', url.home_browse_shows)
+        cy.contains(btnText.purchase_show_selection_text).should('be.visible').click()
+        cy.get('#sda-shows-details-ticket-loader-tickets-button').should('be.visible').click()
+        cy.contains(btnText.purchase_ticket_button).should('be.visible').click()
+        cy.wait(5000)
+        cy.get('#sda-shows-order-buy-button').should('be.visible')
+        cy.get('#name').should('be.visible').type(uniqueNamesGenerator(config))
+        cy.get('#name').clear().type(uniqueNamesGenerator(config))
+        cy.get('#sda-credit-card-number-input').children('input').should('be.visible').type('4242424242424242')
+        cy.get('#sda-credit-card-number-input').children('input').clear().type('4242424242424242')
+        cy.get('#sda-credit-card-expiry-input').should('be.visible').type('1023')
+        cy.get('#sda-credit-card-expiry-input').clear().type('1023')      
+        cy.get('#sda-credit-card-cvc-input').should('be.visible').type('564')
+        cy.get('#sda-shows-order-buy-button').should('be.visible').click()
 
     })
 

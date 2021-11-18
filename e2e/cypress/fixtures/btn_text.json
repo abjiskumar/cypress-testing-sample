@@ -1,8 +1,13 @@
 {
     "home_join_btn":"Join",
+    "home_browse":"Browse",
+    "plan_new_show":"Plan a new show",
+    "about_sidedoor_chat":"About Side Door Chat",
     "home_join_watch_btn":"#sda-nav-menu-desktop-watch-item",
     "home_join_perform_btn":"#sda-nav-menu-desktop-perform-item",
     "home_join_host_btn":"#sda-nav-menu-desktop-host-item",
+    "home_browse_artist":"#sda-empty-nav-desktop-artists-link",
+    "home_browse_shows":"#sda-desktop-shows-link",
 
     "watch_signup_facebook":"#sda-audience-login-facebook-button",
     "watch_signup_google":"#sda-audience-login-google-button",
@@ -22,6 +27,19 @@
     "space_intent":"#signup-have-a-venue-button",
     "space_present_signup":"#signup-venue-create-form",
     "present_intent":"#signup-want-to-present-button",
+
+    "purchase_show_selection_text":"Abhijit's Place",
+    "purchase_ticket_button":"Purchase Tickets",
+
+    
+    "plan_ips_button":"#sda-start-planning-in-person-show-button",
+    "solo_show_button":"#sda-in-person-shows-create-solo-button",
+    "chat_tutorial_complete":"#sda-messages-tutorial-complete-button",
+    "show_preview_button":"#sda-messages-tabs-preview-show-button",
+    "manage_dashboard_button":"#sda-nav-menu-dashboard-main-tab",
+    "manage_dashboard_shows":"#sda-nav-menu-messages-tab",
+    "save_date_button":"Save Date",
+    "show_date":"#startTime",
 
 
     "artist_signup_facebook":"#sda-artist-login-facebook-button",

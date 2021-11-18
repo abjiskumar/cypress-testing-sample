@@ -4,7 +4,7 @@ import loginCreds from '../fixtures/login_credentials.json'
 import input from '../fixtures/input_options.json'
 import { uniqueNamesGenerator, Config, names } from 'unique-names-generator';
 
-describe('Creating a new space user ', () => {
+describe('Create a new __ show ', () => {
     indexedDB.deleteDatabase('firebaseLocalStorageDb')
     var randomEmailType = require('random-email')({ domain: 'gmail.com' });
     const config: Config = {
@@ -52,18 +52,39 @@ describe('Creating a new space user ', () => {
         cy.get('[type="radio"]').first().check()
         cy.get(btnText.space_create).click()
         cy.url().should('include', url.artist_host_profile_creation)
-        cy.get('#compiledAddress').type(input.spaceLocation)
-        cy.get('#compiledAddress').clear().type(input.spaceLocation)
+        cy.get('#compiledAddress').type(input.spaceLocation, {force:true})
+        cy.get('#compiledAddress').clear().type(input.spaceLocation, {force:true});
         cy.get('#compiledAddress-option-0').should('be.visible').click()
         cy.get(btnText.space_save_continue).should('be.visible').click()
 
     })
 
     it('Verify successful account creation and log out', () => {
-        cy.url().should('include', url.host_profile_complete)
-        cy.get('#sda-nav-menu-open-button').click()
-        cy.get(btnText.log_out).click()
-        cy.get(btnText.log_in).should('be.visible')
+        cy.url().should('equal', url.host_profile_complete)
+        cy.get('#sda-nav-menu-dashboard-main-tab').click();
+        cy.url().should('equal', url.manage_dashboard)
+        cy.contains(btnText.plan_new_show).click()
+        cy.url().should('include', url.show_plan_home_page)
+        cy.get(btnText.plan_ips_button).click()
+        cy.url().should('include', url.create_ips)
+        cy.get(btnText.solo_show_button).click()
+        cy.url().should('include', url.manage_dashboard_shows)
+        cy.get(btnText.chat_tutorial_complete).should('be.visible').click()
+        cy.get(btnText.show_preview_button).should('be.visible')
+        cy.get(btnText.show_date).click()
+        cy.get(input.showDate).click()
+        cy.contains(btnText.save_date_button).click()
+        
+
+
+
+
+
+
+
+
+
+        
 
     })
 

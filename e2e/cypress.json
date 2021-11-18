@@ -5,7 +5,9 @@
     "audienceRegistration.ts",
     "artistRegistration.ts",
     "hostSpaceRegistration.ts",
-    "hostPresentRegistration.ts"
+    "hostPresentRegistration.ts",
+    "purchaseTicketAudience.ts",
+    "create.ts"
   ],
   "supportFile": "cypress/support/index.ts"
 }

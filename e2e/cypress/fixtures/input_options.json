@@ -2,7 +2,8 @@
     "artistName":"Test Artist",
     "performanceType":"Music",
     "artistLocation":"Halifax",
-    "spaceLocation":"Kingsway",
-    "presenterLocation":"Vancouver"
+    "spaceLocation":"4780 Kingsway",
+    "presenterLocation":"Vancouver",
+    "showDate":"[aria-label='Nov 21, 2021']"
   }
   

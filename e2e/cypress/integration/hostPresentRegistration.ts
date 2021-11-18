@@ -5,7 +5,7 @@ import input from '../fixtures/input_options.json'
 import { uniqueNamesGenerator, Config, names } from 'unique-names-generator';
 
 describe('Creating a new space user ', () => {
-    
+    indexedDB.deleteDatabase('firebaseLocalStorageDb')
     var randomEmailType = require('random-email')({ domain: 'gmail.com' });
     const config: Config = {
         dictionaries: [names]
@@ -51,7 +51,8 @@ describe('Creating a new space user ', () => {
 
     it('Fill presenter specific details to save the profile', () =>{
         cy.url().should('include', url.artist_host_profile_creation)
-        cy.get('#compiledAddress').type(input.artistLocation);
+        cy.get('#compiledAddress').type(input.presenterLocation);
+        cy.get('#compiledAddress').clear().type(input.presenterLocation)
         cy.get('#compiledAddress-option-0').should('be.visible');
         cy.get('#compiledAddress-option-0').click();
         cy.get(btnText.space_save_continue).should('be.visible').click()

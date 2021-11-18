@@ -8,5 +8,11 @@
   "artist_host_profile_creation": "https://staging.sidedooraccess.com/dashboard/profile/new",
   "host_profile_complete":"https://staging.sidedooraccess.com/dashboard/profile",
   "host_space_signup_url" : "https://staging.sidedooraccess.com/signup/host/space",
-  "host_presenter_signup_url": "https://staging.sidedooraccess.com/signup/host/presenter"
+  "host_presenter_signup_url": "https://staging.sidedooraccess.com/signup/host/presenter",
+  "home_browse_artists":"https://staging.sidedooraccess.com/artists",
+  "home_browse_shows":"https://staging.sidedooraccess.com/shows",
+  "manage_dashboard":"https://staging.sidedooraccess.com/dashboard",
+  "show_plan_home_page":"https://staging.sidedooraccess.com/dashboard/shows/plan",
+  "create_ips":"https://staging.sidedooraccess.com/dashboard/in-person/create",
+  "manage_dashboard_shows":"https://staging.sidedooraccess.com/dashboard/shows"
 }
